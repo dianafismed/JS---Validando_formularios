@@ -25,7 +25,7 @@ const btnEnviarFoto = document.querySelector("[data-enviar]")
 btnEnviarFoto.addEventListener('click', () => {
   const receberDadosExistentes = localStorage.getItem("cadastro") // busca os dados inseridos no formulário
   const converteRetorno = JSON.parse(receberDadosExistentes) // faz um json destes dados
-  converteRetorno.imagem = imagemURL // adiciona a imagem capturada
-  localStorage.setItem('cadastro', JSON.stringify(converteRetorno)) // converte em json
+  converteRetorno.imagem = imagemURL // adiciona a imagem capturada ao arquivo já existente
+  localStorage.setItem('cadastro', JSON.stringify(converteRetorno)) // converte em json e salva no localStorage
   window.location.href = '../pages/abrir-conta-form-3.html' // direciona para a próxima página
 })
